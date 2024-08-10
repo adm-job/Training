@@ -7,7 +7,7 @@ namespace Training
     {
         static void Main(string[] args)
         {
-            var _inputStr = new[] { "решИла нЕ Упрощать и зашифРОВАтЬ Все послаНИЕ",
+            string[] _inputStr = new[] { "решИла нЕ Упрощать и зашифРОВАтЬ Все послаНИЕ",
                 "дАже не Старайся нИЧЕГО у тЕбя нЕ получится с расшифРОВкой",
                 "Сдавайся НЕ твоего ума Ты не споСОбЕн Но может быть",
                 "если особенно упорно подойдешь к делу",
@@ -17,8 +17,7 @@ namespace Training
                 "то у тебя все получится",
                 "и я буДу Писать тЕбЕ ещечао"};
 
-            string v = _inputStr[];
-            Console.WriteLine(DecodeMessage(v));
+            Console.WriteLine(DecodeMessage(_inputStr));
         }
         private static string DecodeMessage(string[] lines)
         {
