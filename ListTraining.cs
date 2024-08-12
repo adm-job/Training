@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Training
 {
-    internal class Program
+    internal class ListTraining
     {
         static void Main(string[] args)
         {
