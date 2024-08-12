@@ -28,7 +28,7 @@ namespace Training
             {
                 foreach (var word in line.Split(" ").Reverse())
                 {
-                    if (word != null && char.IsUpper(word[0]))
+                    if (word.Length != 0 && char.IsUpper(word[0]))
                     {
                         stringAll += word + " ";
                     }
@@ -47,9 +47,9 @@ namespace Training
 	        foreach (var e in list)
 		        Console.WriteLine(e);
 
-            Для разбиения строки на слова можно использовать функцию text.Split(' ')
+            Для разбиения строки на слова функция text.Split(' ')
 
-            Вы можете проверить, является ли символ заглавным с помощью Char.IsUpper
+            Является ли символ заглавным  Char.IsUpper
 
             Используйте List<string>, чтобы сохранить все найденные в тексте слова с большой буквы
 
@@ -57,7 +57,7 @@ namespace Training
 
             Склеить отдельные слова в текст можно ещё одним циклом, а можно специальным методом string.Join(" ", words.ToArray())
 
-            Имейте в виду, "".Split(' ') возвращает пустую строку! Обращение к нулевому символу пустой строки приведёт к ошибке ArgumentOutOfRangeException.
+            "".Split(' ') возвращает пустую строку! Обращение к нулевому символу пустой строки приведёт к ошибке ArgumentOutOfRangeException.
             */
         }
     }
