@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Training
 {
@@ -23,25 +24,17 @@ namespace Training
         private static string DecodeMessage(string[] lines)
         {
             string stringAll = "";
-            List <string> words = new List<string>();
-            //words.Add(lines.Split(" "));
-            foreach (string e in lines)
+            foreach (var line in lines.Reverse())
             {
-                foreach (string str in e.Split(' '))
+                foreach (var word in line.Split(" ").Reverse())
                 {
-                    if (char.IsUpper(str[0]))
-                    { 
-                        words.Add(str);
+                    if (word != null && char.IsUpper(word[0]))
+                    {
+                        stringAll += word + " ";
                     }
                 }
             }
-            words.Reverse();
-            foreach (string str in words) 
-            {
-                stringAll += str + " ";
-            }
- 
-            return stringAll;
+            return stringAll.Trim();
             /* 
             List<int> list = new List<int>();
 
