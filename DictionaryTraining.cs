@@ -63,7 +63,7 @@ namespace Training
             return dictionary;
             
         }
-        static void Main(string[] args)
+        public static void StartDictionary()
         {
 
             var dict = OptimizeContacts(new List<string>());

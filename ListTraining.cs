@@ -7,7 +7,7 @@ namespace Training
 {
     internal class ListTraining
     {
-        static void Main(string[] args)
+        public static void StartList()
         {
             string[] _inputStr = new[] { "решИла нЕ Упрощать и зашифРОВАтЬ Все послаНИЕ",
                 "дАже не Старайся нИЧЕГО у тЕбя нЕ получится с расшифРОВкой",
