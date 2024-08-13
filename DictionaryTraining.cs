@@ -52,10 +52,22 @@ namespace Training
             var dictionary = new Dictionary<string, List<string>>();
             
             contacts.AddRange(GetContacts());
-            
-            foreach (var name in dictionary)
+
+            foreach (var name in contacts)
             {
-                //WriteLine(name.Key, name.)
+                var nameFriend = name.Split(':')[0];
+                var namePrefix = (nameFriend.Length <= 2) ? nameFriend : nameFriend.Substring(0,2);
+                var emailFriend = name.Split(':')[1];
+
+                if (!dictionary.ContainsKey(namePrefix))
+                {
+                    dictionary.Add(namePrefix, new List<string>() { emailFriend });
+                    //dictionary[nameFriend].Add(emailFriend);
+                }
+                else
+                {
+                    dictionary[namePrefix].Add(emailFriend);
+                }
 
 
             }
@@ -68,5 +80,12 @@ namespace Training
 
             var dict = OptimizeContacts(new List<string>());
         }
+            //Разбить запись на имя и email вам поможет уже знакомый метод Split у строки
+
+            //Проверяйте наличие ключа в словаре перед добавлением
+
+            //Не забывайте про крайние случаи!
+
+            //Может так получиться, что в имени будет меньше двух букв.
     }
 }

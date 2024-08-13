@@ -25,6 +25,9 @@ namespace Training
                     Console.WriteLine("----->>> " + 2);
                     DictionaryTraining.StartDictionary();
                     break;
+                default:
+                    Console.WriteLine("Number is not found");
+                    break;
             }
         }
     }
