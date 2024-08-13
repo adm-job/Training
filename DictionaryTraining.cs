@@ -61,12 +61,12 @@ namespace Training
 
                 if (!dictionary.ContainsKey(namePrefix))
                 {
-                    dictionary.Add(namePrefix, new List<string>() { emailFriend });
+                    dictionary.Add(namePrefix, new List<string>() { name });
                     //dictionary[nameFriend].Add(emailFriend);
                 }
                 else
                 {
-                    dictionary[namePrefix].Add(emailFriend);
+                    dictionary[namePrefix].Add(name);
                 }
 
 
@@ -80,12 +80,5 @@ namespace Training
 
             var dict = OptimizeContacts(new List<string>());
         }
-            //Разбить запись на имя и email вам поможет уже знакомый метод Split у строки
-
-            //Проверяйте наличие ключа в словаре перед добавлением
-
-            //Не забывайте про крайние случаи!
-
-            //Может так получиться, что в имени будет меньше двух букв.
     }
 }
